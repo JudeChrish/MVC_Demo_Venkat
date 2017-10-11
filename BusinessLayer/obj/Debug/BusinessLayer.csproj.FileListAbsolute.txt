@@ -1,0 +1,5 @@
+E:\Chrishantha\TestingC#Code\MvcDemo-25July2017\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\Chrishantha\TestingC#Code\MvcDemo-25July2017\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\Chrishantha\TestingC#Code\MvcDemo-25July2017\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\Chrishantha\TestingC#Code\MvcDemo-25July2017\BusinessLayer\obj\Debug\BusinessLayer.pdb
+E:\Chrishantha\TestingC#Code\MvcDemo-25July2017\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BusinessLayer.BllEmployee>
+
+@{
+    ViewBag.Title = "GetEmployee";
+}
+
+<h2>GetEmployee</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div style="font-family:Arial">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Designation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentId)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            using (Html.BeginForm("Delete", "Employee", new { id = item.EmpId }))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Designation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.EmpId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.EmpId }) |
+                        <input type="submit" value="Delete" class="btn btn-primary" onclick="return confirm('Do you want to delete @item.Name');"/> 
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+</div>

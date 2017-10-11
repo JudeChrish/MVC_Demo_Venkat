@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="EntitiesContext">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="Models.Department">
+        <MappingFragment StoreEntitySet="tbl_Department">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="Models.Employee">
+        <MappingFragment StoreEntitySet="tbl_Employee">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spAddEmployee" FunctionName="Models.Store.spAddEmployee" />
+    <FunctionImportMapping FunctionImportName="spDeleteEmployee" FunctionName="Models.Store.spDeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="spGetAllEmployees" FunctionName="Models.Store.spGetAllEmployees">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Models.spGetAllEmployees_Result">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spUpdateEmployee" FunctionName="Models.Store.spUpdateEmployee" />
+  </EntityContainerMapping>
+</Mapping>
